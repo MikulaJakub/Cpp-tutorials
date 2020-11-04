@@ -5,6 +5,8 @@
 // server
 // create and write into a shared memory segment
 // client will attach to the segment and read from it
+//
+// this server (ipc_int_server.cpp) communicates with the client (ipc_int_client.cpp)
 
 using namespace std;
 
@@ -37,7 +39,8 @@ int main()
 
 	// attach to shared memory segment with the given id and write data
 	cout << "Attaching to shared memory segment to write data ..." << endl;	
-	
+
+	// create a pointer to the shared memory	
 	int* shared_memory;
 	shared_memory = (int*) shmat(id, NULL, 0666);
 
@@ -55,6 +58,9 @@ int main()
 
 	// detach from shared memory
 	shmdt(shared_memory);
+
+	// shared memory exists and client may read from it
+	// running ipc_int_client.cpp will attach, read and destroy the shared memory segment
 
 	cout << "Server has finished!" << endl;
 

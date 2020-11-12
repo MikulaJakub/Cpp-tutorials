@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 		vec_out.push_back(thisVec);
 	}	
 
-	
+	// -----------------------------------	
 	// write std vector into a binary file
 	cout << "Writing std vector into a binary file ..." << endl;
 	ofstream out_file("vec.bin", ios::out | ios::binary);
@@ -65,6 +65,7 @@ int main(int argc, char *argv[])
 	out_file.close();
 	cout <<BOLDGREEN<< "Vector has been successfully written into a binary file!" <<RESET<<endl;
 
+	// ------------------------------------------------
 	// read the file and print the result into terminal
 	cout << "Reading the binary file ..." << endl;
 	ifstream in_file("vec.bin", ios::in | ios::binary);
@@ -94,7 +95,6 @@ int main(int argc, char *argv[])
 
 		cout << ' ' << endl;
 	}
-
 
 	cout <<BOLDGREEN<< "Program has finished!" <<RESET<<endl;
 	cout << ' ' << endl;

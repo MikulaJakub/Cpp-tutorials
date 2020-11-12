@@ -98,11 +98,11 @@ int main(int argc, char *argv[])
 		cout << "Current major size is " << thisSize << endl;
 	
 		majorSize += thisSize;
-		modify_file.close();
+//		modify_file.close();
 	}
 	cout << "majorSize = " << majorSize << endl;	
 	
-	modify_file.open("vec.bin", ios:: binary | ios:: in | ios:: out);
+//	modify_file.open("vec.bin", ios:: binary | ios:: in | ios:: out);
 
 	// Set pointer to the end and add a new line
 	modify_file.seekp(0, ios::end);

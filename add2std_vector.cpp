@@ -66,9 +66,9 @@ int main(int argc, char *argv[])
 		ofstream create_file("vec.bin", ios:: binary | ios:: out);
 		create_file.write(reinterpret_cast<const char *>(&majorSize), sizeof(int));
 		create_file.close();
-		majorSize --;	// -1 because I just wrote the major size here.
+		majorSize = 0;	// -1 because I just wrote the major size here.
 	
-		// Now, an empty file is created! The first integer is written.
+		// Now, a binary file is created containing a single integer.
 
 	}
 
